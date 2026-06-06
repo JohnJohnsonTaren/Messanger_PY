@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8556a355-d8d3-467c-af99-4a4e0446b5c0" name="Changes" comment="Revert &quot;Add Желательные сведения!!!!!.md file&quot;&#10;&#10;This reverts commit 93b349b9">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/auth_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/chat_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/postgres_adapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/sqlite_adapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/message_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/user_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/auth_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/message_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login_view.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mara04060&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JohnJohnsonTaren/Messanger_PY.git&quot;,
+    &quot;accountId&quot;: &quot;100a0756-4841-4f05-9e3e-4555243a0dde&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3ElM4313aUf2a8TOS73oJDZllZ3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8556a355-d8d3-467c-af99-4a4e0446b5c0" name="Changes" comment="" />
+      <created>1780748508441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780748508441</updated>
+      <workItem from="1780748510046" duration="298000" />
+      <workItem from="1780761045609" duration="4490000" />
+      <workItem from="1780765603411" duration="803000" />
+    </task>
+    <task id="LOCAL-00001" summary="Start Commit">
+      <option name="closed" value="true" />
+      <created>1780748605033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1780748605034</updated>
+    </task>
+    <task id="LOCAL-00002" summary="dev: Structure project">
+      <option name="closed" value="true" />
+      <created>1780763684541</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1780763684543</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dev: Structure project">
+      <option name="closed" value="true" />
+      <created>1780763914793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780763914793</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Revert &quot;Add Желательные сведения!!!!!.md file&quot;&#10;&#10;This reverts commit 93b349b9">
+      <option name="closed" value="true" />
+      <created>1780764271164</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780764271165</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start Commit" />
+    <MESSAGE value="dev: Structure project" />
+    <MESSAGE value="Revert &quot;Add Желательные сведения!!!!!.md file&quot;&#10;&#10;This reverts commit 93b349b9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Add Желательные сведения!!!!!.md file&quot;&#10;&#10;This reverts commit 93b349b9" />
+  </component>
+</project>
