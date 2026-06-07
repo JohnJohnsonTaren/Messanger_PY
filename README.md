@@ -16,41 +16,33 @@ project/
 ├── main.py
 <br/>├── config/
 <br/>│   └── settings.py
-
 <br/>├── controllers/
 <br/>│   ├── auth_controller.py
 <br/>│   ├── chat_controller.py
 <br/>│   └── user_controller.py
-<br/><br/>
 <br/>├── models/
 <br/>│   ├── user.py
 <br/>│   ├── message.py
 <br/>│   └── room.py
-
 <br/>├── views/
 <br/>│   ├── login_view.py
 <br/>│   ├── chat_view.py
 <br/>│   └── main_window.py
-<br/>
 <br/>├── services/
 <br/>│   ├── auth_service.py
 <br/>│   ├── chat_service.py
 <br/>│   └── message_service.py
-<br/>
 <br/>├── repositories/
 <br/>│   ├── user_repository.py
 <br/>│   ├── message_repository.py
 <br/>│   └── room_repository.py
-<br/>
 <br/>├── database/
 <br/>│   ├── database_interface.py
 <br/>│   ├── sqlite_adapter.py
 <br/>│   └── postgres_adapter.py
-<br/>
 <br/>├── network/
 <br/>│   ├── client.py
 <br/>│   └── server.py
-<br/>
 <br/>└── utils/
 <br/>├── logger.py
 <br/>└── security.py
