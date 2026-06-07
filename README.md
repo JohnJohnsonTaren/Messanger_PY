@@ -6,7 +6,7 @@ Messanger on Python3
 <br/><b>View</b> — интерфейс пользователя.
 <br/><b>Controller</b> — связывает View и Model.
 <br/><b>Service</b> — бизнес-логика.
-R<br/><b>epository </b>— слой доступа к данным.
+<br/><b>Repository </b>— слой доступа к данным.
 <br/><b/>Database Adapter</b>— возможность менять SQLite на PostgreSQL, MySQL и т.д. без изменения бизнес-логики.
 
 Ниже приведена рекомендуемая структура проекта.
