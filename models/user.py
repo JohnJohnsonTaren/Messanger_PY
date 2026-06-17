@@ -1,11 +1,10 @@
-class User:
+from dataclasses import dataclass, field
+from datetime import datetime
 
-    def __init__(
-            self,
-            user_id,
-            username,
-            password_hash
-    ):
-        self.user_id = user_id
-        self.username = username
-        self.password_hash = password_hash
+@dataclass
+class User:
+    id: int
+    username: str
+    password_hash: str
+    status: bool = False
+    created_at: datetime = field(default_factory=datetime.now)
