@@ -1,33 +1,18 @@
-from services.auth_service import AuthService
-
-
 class AuthController:
 
-    def __init__(self, view):
+    def __init__(self, auth_service):
+        self.auth_service = auth_service
 
-        self.view = view
+    def  handle_register(self, username, password):
+        result = self.auth_service.register(username, password)
+        if result:
+            return "Реєстрація пройшла успішно."
+        else:
+            return "Помилка реєстрації."
 
-        # В будущем внедряется через DI
-        self.service = None
-
-    def start(self):
-
-        self.view.show()
-
-    def login(self):
-
-        username = self.view.get_login()
-        password = self.view.get_password()
-
-        # TODO:
-        # Вызвать сервис авторизации
-        pass
-
-    def register(self):
-
-        username = self.view.get_login()
-        password = self.view.get_password()
-
-        # TODO:
-        # Вызвать регистрацию
-        pass
+    def handle_login(self, username, password):
+        result = self.auth_service.login(username, password)
+        if result:
+            return "Ви успішно увійшли."
+        else:
+            return "Вхід не вдалий"
