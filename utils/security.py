@@ -1,6 +1,7 @@
 import re
 import bcrypt
 
+
 def hash_password(password):
     return bcrypt.hashpw(password.encode('UTF-8'), bcrypt.gensalt())
 
