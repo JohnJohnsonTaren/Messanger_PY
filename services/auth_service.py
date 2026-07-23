@@ -1,5 +1,7 @@
 from utils.security import hash_password, verify_password, validate_password
 from models.user import User
+from exceptions import UserAlreadyExistsError, EmptyUsernameError, InvalidCredentialsError
+
 
 class AuthService:
 
@@ -8,15 +10,12 @@ class AuthService:
 
     def register(self, username, password):
         if not username.strip():
-            print("Логін не може бути порожнім")
-            return False
+            raise EmptyUsernameError("Ім'я користувача не може бути порожнім")
 
         existing_user = self.user_repository.find_by_username(username)
         if existing_user:
-            print("Користувач з таким логіном вже існує")
-            return False
-        if not validate_password(password):
-            return False
+            raise UserAlreadyExistsError("Користувач з таким ім'ям вже існує")
+        validate_password(password)
         password_hash = hash_password(password)
         user = User(id = None, username = username, password_hash = password_hash)
         self.user_repository.save(user)
@@ -25,12 +24,11 @@ class AuthService:
     def login(self, username, password):
         existing_user = self.user_repository.find_by_username(username)
         if not existing_user:
-            return False
+            raise InvalidCredentialsError("Ім'я користувача та/або пароль невірні")
         else:
             if verify_password(password, existing_user.password_hash):
                 return True
             else:
-                print(f"Логін або пароль невірні")
-                return False
+                raise InvalidCredentialsError("Ім'я користувача та/або пароль невірні")
 
 

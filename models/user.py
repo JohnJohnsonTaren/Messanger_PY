@@ -6,5 +6,5 @@ class User:
     id: int
     username: str
     password_hash: str
-    status: bool = False
+    is_active: bool = False
     created_at: datetime = field(default_factory=datetime.now)

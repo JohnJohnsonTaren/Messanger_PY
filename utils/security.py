@@ -1,6 +1,11 @@
 import re
 import bcrypt
+from exceptions import WeakPasswordError
 
+MIN_PASSWORD_LENGTH = 8
+MIN_UPPERCASE_CHARS = 1
+MIN_SPECIAL_CHARS = 1
+MIN_DIGITS = 1
 
 def hash_password(password):
     return bcrypt.hashpw(password.encode('UTF-8'), bcrypt.gensalt())
@@ -9,15 +14,13 @@ def verify_password(password, hashed):
     return bcrypt.checkpw(password.encode('UTF-8'), hashed)
 
 def validate_password(password):
-    if len(password) >= 8 and re.search('[A-Z]', password) and re.search('[!@#$%^&*]', password) and re.search('[0-9]', password):
-        return True
-    else:
-        print(f"\nВаш пароль{password} не відповідає вимогам: ")
-        print("Мінімум 8 символів")
-        print("Хочаб 1 велика літера")
-        print("Хочаб один спецсимвол")
-        print("Хочаб одну цифру")
-
-        return False
+    if len(password) < MIN_PASSWORD_LENGTH:
+        raise WeakPasswordError(f"Мінімум {MIN_PASSWORD_LENGTH} символів")
+    if not re.search("[A-Z]", password):
+        raise WeakPasswordError(f"Мінімум {MIN_UPPERCASE_CHARS} букв")
+    if not re.search('[!@#$%^&*]', password):
+        raise WeakPasswordError(f"Мінімум {MIN_SPECIAL_CHARS} спецсимвол")
+    if not re.search('[0-9]', password):
+        raise WeakPasswordError(f"Мінімум {MIN_DIGITS} цифра")
 
 
