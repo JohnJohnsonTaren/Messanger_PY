@@ -1,33 +1,33 @@
-from services.auth_service import AuthService
+from exceptions import EmptyUsernameError, UserAlreadyExistsError, WeakPasswordError, InvalidCredentialsError
 
+
+REGISTER_SUCCESS = "Реєстрація пройшла успішно"
+LOGGING_SUCCESS = "Ви успішно увійшли"
+EMPTY_USER_NAME = "Ім'я користувача не може бути порожнім!"
+USER_ALREADY_EXIST = "Користувач з таким ім'ям вже існує!"
+WEAK_PASSWORD = "Ваш пароль не відповідає  вимогам!"
+INVALID_CREDS = "Ім'я користувача та/або пароль невірні"
 
 class AuthController:
 
-    def __init__(self, view):
+    def __init__(self, auth_service):
+        self.auth_service = auth_service
 
-        self.view = view
+    def handle_register(self, username, password):
+        try:
+            self.auth_service.register(username, password)
+            return REGISTER_SUCCESS
+        except EmptyUsernameError:
+            return EMPTY_USER_NAME
+        except UserAlreadyExistsError:
+            return USER_ALREADY_EXIST
+        except WeakPasswordError:
+            return WEAK_PASSWORD
 
-        # В будущем внедряется через DI
-        self.service = None
+    def handle_login(self, username, password):
+        try:
+            self.auth_service.login(username, password)
+            return LOGGING_SUCCESS
+        except InvalidCredentialsError:
+            return INVALID_CREDS
 
-    def start(self):
-
-        self.view.show()
-
-    def login(self):
-
-        username = self.view.get_login()
-        password = self.view.get_password()
-
-        # TODO:
-        # Вызвать сервис авторизации
-        pass
-
-    def register(self):
-
-        username = self.view.get_login()
-        password = self.view.get_password()
-
-        # TODO:
-        # Вызвать регистрацию
-        pass
